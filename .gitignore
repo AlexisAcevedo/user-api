@@ -1,0 +1,183 @@
+# ============================================================
+# SECURITY: Variables de Entorno (NUNCA commitear!)
+# ============================================================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# ============================================================
+# Python Environment & Build Artifacts
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ============================================================
+# IDE & Editor Settings
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+.project
+.pydevproject
+.settings/
+
+# ============================================================
+# Database Files
+# ============================================================
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+
+# ============================================================
+# Logs (SENSITIVE - may contain credentials)
+# ============================================================
+logs/
+*.log
+*.log.*
+.log
+
+# ============================================================
+# Testing & Coverage
+# ============================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+# ============================================================
+# OS Files
+# ============================================================
+.DS_Store
+Thumbs.db
+.directory
+*.swp
+*~
+
+# ============================================================
+# IDE Caches
+# ============================================================
+*.cache
+.cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+
+# ============================================================
+# Distribution / Packaging
+# ============================================================
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+
+# ============================================================
+# Secret Files (Extra Protection)
+# ============================================================
+*.pem
+*.key
+*.crt
+*.cert
+secrets.txt
+credentials.json
+
+# ============================================================
+# Docker & Containers
+# ============================================================
+.docker/
+docker-compose.override.yml
+
+# ============================================================
+# Node Dependencies (for frontend if needed)
+# ============================================================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ============================================================
+# macOS
+# ============================================================
+.AppleDouble
+.LSOverride
+._*
+
+# ============================================================
+# Windows
+# ============================================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================================================
+# Backup Files
+# ============================================================
+*.bak
+*.backup
+*.orig
+*.swp
+
+# ============================================================
+# IDE Temporary Files
+# ============================================================
+.~*
+,*
+
+# ============================================================
+# Database Backups
+# ============================================================
+*.sql
+backup/
+backups/
+
+# ============================================================
+# Environment-specific files
+# ============================================================
+.env.example  # IMPORTANTE: NO ignorar - es plantilla
+.env.prod    # Ejemplo para producción
+.env.dev     # Ejemplo para desarrollo

@@ -1,0 +1,90 @@
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Entornos virtuales
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.editorconfig
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Archivos del sistema
+.git/
+.gitignore
+.github/
+
+# Documentación
+docs/
+*.md
+LICENSE
+
+# Archivos locales
+.env.local
+.env.*.local
+docker-compose.override.yml
+*.pem
+*.key
+*.crt
+
+# Otros
+node_modules/
+package-lock.json
+yarn.lock
+.docker-sync
+
+# Frontend
+node_modules/
+dist/
+.cache/
+
+# Base de datos local (en desarrollo)
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos temporales
+*.tmp
+*.temp
+*.bak

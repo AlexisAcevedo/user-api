@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Auth - Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🔐 Sistema de Autenticación FastAPI</h1>
+            <div id="user-status" class="user-status">No autenticado</div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Auth Section -->
+            <section class="auth-section" id="auth-section">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="register">Registrarse</button>
+                    <button class="tab-btn" data-tab="login">Iniciar Sesión</button>
+                </div>
+
+                <!-- Register Tab -->
+                <div id="register-tab" class="tab-content active">
+                    <form id="register-form" class="form">
+                        <h2>Crear Cuenta</h2>
+                        
+                        <div class="form-group">
+                            <label for="register-username">Usuario:</label>
+                            <input 
+                                type="text" 
+                                id="register-username" 
+                                placeholder="Ingresa tu usuario"
+                                minlength="3"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-password">Contraseña:</label>
+                            <input 
+                                type="password" 
+                                id="register-password" 
+                                placeholder="Ingresa tu contraseña"
+                                minlength="6"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-password-confirm">Confirmar Contraseña:</label>
+                            <input 
+                                type="password" 
+                                id="register-password-confirm" 
+                                placeholder="Confirma tu contraseña"
+                                minlength="6"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                        <div id="register-message" class="message"></div>
+                    </form>
+                </div>
+
+                <!-- Login Tab -->
+                <div id="login-tab" class="tab-content">
+                    <form id="login-form" class="form">
+                        <h2>Iniciar Sesión</h2>
+                        
+                        <div class="form-group">
+                            <label for="login-username">Usuario:</label>
+                            <input 
+                                type="text" 
+                                id="login-username" 
+                                placeholder="Ingresa tu usuario"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password">Contraseña:</label>
+                            <input 
+                                type="password" 
+                                id="login-password" 
+                                placeholder="Ingresa tu contraseña"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                        <div id="login-message" class="message"></div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Dashboard Section (visible only when authenticated) -->
+            <section class="dashboard-section" id="dashboard-section" style="display: none;">
+                <div class="dashboard-header">
+                    <h2>Dashboard</h2>
+                    <button id="logout-btn" class="btn btn-danger">Cerrar Sesión</button>
+                </div>
+
+                <!-- User Info -->
+                <div class="info-card">
+                    <h3>Información del Usuario</h3>
+                    <div class="info-content">
+                        <p><strong>Usuario:</strong> <span id="user-info-username">-</span></p>
+                        <p><strong>ID:</strong> <span id="user-info-id">-</span></p>
+                        <p><strong>Fecha de Registro:</strong> <span id="user-info-created">-</span></p>
+                    </div>
+                </div>
+
+                <!-- Token Info -->
+                <div class="info-card">
+                    <h3>Información de Token</h3>
+                    <div class="info-content">
+                        <p><strong>Access Token:</strong></p>
+                        <textarea id="access-token-display" readonly class="token-display"></textarea>
+                        
+                        <p style="margin-top: 15px;"><strong>Refresh Token:</strong></p>
+                        <textarea id="refresh-token-display" readonly class="token-display"></textarea>
+                        
+                        <p style="margin-top: 15px;"><strong>Expira en:</strong> <span id="token-expiry">-</span></p>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="info-card">
+                    <h3>Acciones</h3>
+                    <div class="actions">
+                        <button id="get-user-btn" class="btn btn-secondary">Obtener Datos del Usuario</button>
+                        <button id="refresh-token-btn" class="btn btn-secondary">Renovar Token</button>
+                    </div>
+                </div>
+
+                <!-- Test Endpoints -->
+                <div class="info-card">
+                    <h3>Probar Endpoints</h3>
+                    <div class="actions">
+                        <button id="health-btn" class="btn btn-info">GET /health</button>
+                        <button id="protected-btn" class="btn btn-info">GET /users/me</button>
+                    </div>
+                    <div id="endpoint-result" class="endpoint-result"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>API Health: <span id="api-health" class="health-indicator">Verificando...</span></p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #999;">
+                API URL: <code>http://127.0.0.1:8000</code>
+            </p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
