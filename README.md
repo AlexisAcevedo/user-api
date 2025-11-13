@@ -17,44 +17,59 @@ Una API REST segura y moderna para autenticación de usuarios con JWT, construid
 - ✅ **Docker y Docker Compose** para containerización
 - ✅ Frontend web interactivo (HTML/CSS/JS)
 
-## 📋 Requisitos
+## 📚 Documentación
 
-- Python 3.10+
-- PostgreSQL 12+
-- pip
+**[👉 Ver índice completo de documentación →](./docs/INDEX.md)**
 
-## � Inicio Rápido con Docker
+Toda la documentación está organizada en la carpeta [`docs/`](./docs/):
+
+| Nivel | Documento | Propósito |
+|-------|-----------|-----------|
+| 🟢 Principiante | [`COMENZAR-AQUI.md`](./docs/COMENZAR-AQUI.md) | Guía de 5 minutos |
+| 🟡 Intermedio | [`DOCKER-GUIDE.md`](./docs/DOCKER-GUIDE.md) | Guía completa de Docker |
+| 🔴 Avanzado | [`GUIA-COMPLETA.md`](./docs/GUIA-COMPLETA.md) | Referencia técnica |
+| 🚀 Despliegue | [`GITHUB-QUICK-START.md`](./docs/GITHUB-QUICK-START.md) | Cómo subir a GitHub |
+| 🔐 Seguridad | [`GITHUB-SECURITY.md`](./docs/GITHUB-SECURITY.md) | Checklist de seguridad |
+| 📊 Estado | [`PROJECT-STATUS.md`](./docs/PROJECT-STATUS.md) | Estado del proyecto |
+
+## 🚀 Inicio Rápido (con Docker)
 
 **Recomendado para desarrollo y producción**
 
-### Requisitos
+### Requisitos mínimos
 - Docker 20.10+
 - Docker Compose 1.29+
 
 ### Pasos
 
-1. **Crear archivo de configuración**
+1. **Clonar o descargar el proyecto**
+   ```bash
+   git clone https://github.com/TU_USUARIO/gemini-api.git
+   cd gemini-api
+   ```
+
+2. **Crear archivo de configuración**
    ```bash
    copy .env.example .env
    ```
 
-2. **Actualizar variables sensibles** (opcional)
+3. **Actualizar variables sensibles** (opcional)
    ```bash
-   # Edita .env y cambia:
+   # Edita .env y personaliza si es necesario:
    # - SECRET_KEY (genera uno nuevo si quieres)
    # - Contraseña de base de datos
    # - CORS_ORIGINS para tu dominio
    ```
 
-3. **Iniciar servicios**
+4. **Iniciar servicios**
    ```bash
    docker-compose up -d
    ```
 
-4. **Acceder a la aplicación**
-   - Frontend: http://localhost
-   - API Swagger: http://localhost/docs
-   - pgAdmin: http://localhost:5050
+5. **Acceder a la aplicación**
+   - 🌐 Frontend: http://localhost
+   - 📚 API Swagger: http://localhost/docs
+   - 🗄️ pgAdmin: http://localhost:5050
 
 ### Comandos Útiles
 
